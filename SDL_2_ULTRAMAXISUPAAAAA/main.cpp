@@ -1,7 +1,14 @@
 #include <SDL.h>
 #include <iostream>
 #include <vector>
+#include "Rectangle.h"
+#include "Circle.h"
 
+//THATS A JOKE 
+double pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823;
+
+
+struct pos { int x; int y; };
 
 void DrawHorizontalLine(SDL_Renderer* renderer, int x, int y, int length) 
 {
@@ -15,12 +22,30 @@ void DrawVerticallLine(SDL_Renderer* renderer, int x, int y, int length)
 		SDL_RenderDrawPoint(renderer, x, y+i);
 }
 
+void PlacePoint(SDL_Renderer* renderer,pos p1, pos p2)
+{
+
+	int d = abs(p1.x - p2.x) + abs(p1.y - p2.y);
+	
+	if (d < 3)
+		return;
+
+	pos milieu;
+	milieu.x = (int)(p1.x + p2.x) / 2;
+	milieu.y = (int)(p1.y + p2.y) / 2;
+
+	SDL_RenderDrawPoint(renderer, milieu.x, milieu.y);
+	PlacePoint(renderer, milieu, p1);
+	PlacePoint(renderer, milieu, p2);
+}
+
 void DrawLine(SDL_Renderer* renderer, int x, int y, int x2, int y2)
 {
-	for (int i = 0; i < 10; i++)
-	{
-		SDL_RenderDrawPoint(renderer, x , y );
-	}
+	pos pos1 = { x, y };
+	pos pos2 = { x2, y2 };
+
+	PlacePoint(renderer, pos1, pos2);
+
 }
 
 void DrawRectangle(SDL_Renderer* renderer, int x, int y, int width, int height)
@@ -43,7 +68,6 @@ void DrawCircle(SDL_Renderer* renderer, int centerX, int centerY, int radius, in
 
 		pos points = {centerX + cos(angle) * radius, centerY + sin(angle) * radius};
 		pointsList.push_back(points);
-		//SDL_RenderDrawPoint(renderer, points.x, points.y);
 	}
 
 	for (int j = 0; j < pointsList.size() - 1; j++)
@@ -109,18 +133,30 @@ int main(int argc, char* argv[])
 	SDL_RenderPresent(renderer);
 
 	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-	DrawLine(renderer, 100, 100, 10, 10);
-	//SDL_RenderDrawPoint(renderer, 10, 10);
+	//DrawLine(renderer, 100, 100, 10, 10);
+	////SDL_RenderDrawPoint(renderer, 10, 10);
 
-	DrawRectangle(renderer, 50, 50, 100, 100);
+	//DrawRectangle(renderer, 50, 50, 100, 100);
 
 
-	SDL_RenderDrawLine(renderer,0, 0, 50 ,20);
+	//SDL_RenderDrawLine(renderer,0, 0, 50 ,20);
 
-	SDL_Rect rect = { 150, 150, 100, 100 };
-	SDL_RenderDrawRect(renderer, &rect);
+	//SDL_Rect rect = { 150, 150, 100, 100 };
+	//SDL_RenderDrawRect(renderer, &rect);
 
-	DrawCircle(renderer, 300, 300, 100, 50);
+	//DrawCircle(renderer, 300, 300, 100, 50);
+
+	//Idk why but it's a feature now
+	SDL_Rect rect = {300, 300, 40, 100};
+
+	//Rectangle rectangle = { rect };
+	//rectangle.Draw(renderer);
+
+	Circle circle = { rect };
+	circle.Draw(renderer);
+
+
+	DrawLine(renderer, 100, 100, 350, 200);
 
 	SDL_RenderPresent(renderer);
 	//SDL_UpdateWindowSurface(window);
