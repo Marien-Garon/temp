@@ -12,6 +12,18 @@ double pi = 3.141592653589793238462643383279502884197169399375105820974944592307
 
 struct pos { int x; int y; };
 
+void handleInput()
+{
+	SDL_Event event;
+	while (true)
+	{
+		SDL_PollEvent(&event);
+		if (event.type == SDL_QUIT)
+			break;
+	}
+}
+
+
 void DrawHorizontalLine(SDL_Renderer* renderer, int x, int y, int length) 
 {
 	for (int i = 0;  i < length; i++)
@@ -138,7 +150,7 @@ int main(int argc, char* argv[])
 	//DrawVerticallLine(renderer, 20, 22, 300);
 	//SDL_RenderPresent(renderer);
 
-	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+	//SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 	//DrawLine(renderer, 100, 100, 10, 10);
 	////SDL_RenderDrawPoint(renderer, 10, 10);
 
@@ -181,10 +193,10 @@ int main(int argc, char* argv[])
 
 	//DrawLine(renderer, 100, 100, 350, 200);
 
-	SDL_Rect rect = { 100, 100, 500, 500 };
+	SDL_Rect rect = { 0, 0, 410, 300 };
 
 	Image img = { renderer, "../image/lettuce.png", rect };
-
+	img.Draw(renderer);
 
 
 	SDL_RenderPresent(renderer);
@@ -192,9 +204,11 @@ int main(int argc, char* argv[])
 
 
 
-
-	system("pause");
+	
+	handleInput();
+	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
+	IMG_Quit();
 	SDL_Quit();
 
 	return 0;

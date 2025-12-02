@@ -16,6 +16,12 @@ public:
 		texture = AssetManager::LoadImage(renderer, path);
 	}
 
+	~Image() { SDL_DestroyTexture(texture); };
+
+
+	SDL_Texture* GetTexture() { return texture; };
+	SDL_Rect* GetRect() { return &rect; };
+
 	void Draw(SDL_Renderer* renderer) override;
 
 };
