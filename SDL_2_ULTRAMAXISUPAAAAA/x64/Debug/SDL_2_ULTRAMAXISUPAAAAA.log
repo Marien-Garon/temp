@@ -1,30 +1,14 @@
-﻿  Circle.cpp
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(8,19): warning C4305: 'initialisation' : troncation de 'double' à 'float'
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(13,25): warning C4838: la conversion de 'double' en 'float' requiert une conversion restrictive
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(13,25): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(13,55): warning C4838: la conversion de 'double' en 'float' requiert une conversion restrictive
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(13,55): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,104): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,83): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,62): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(21,9): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(23,97): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(23,80): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(23,63): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(23,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-  Geometry.cpp
-  Rectangle.cpp
+﻿  Image.cpp
   main.cpp
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(64,19): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(75,100): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(75,81): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(75,62): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(75,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(77,9): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(79,97): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(79,80): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(79,63): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(79,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(66,19): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(77,100): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(77,81): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(77,62): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(77,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(79,9): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(81,97): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(81,80): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(81,63): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(81,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
   Génération de code en cours...
   SDL_2_ULTRAMAXISUPAAAAA.vcxproj -> C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\x64\Debug\SDL_2_ULTRAMAXISUPAAAAA.exe

@@ -1,8 +1,10 @@
 #include <SDL.h>
+#include <SDL_image.h>
 #include <iostream>
 #include <vector>
 #include "Rectangle.h"
 #include "Circle.h"
+#include "Image.h"
 
 //THATS A JOKE 
 double pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823;
@@ -83,15 +85,19 @@ void DrawCircle(SDL_Renderer* renderer, int centerX, int centerY, int radius, in
 
 int main(int argc, char* argv[])
 {
-	if (SDL_Init(SDL_INIT_VIDEO)!= 0)
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) != 0)
 	{
 		std::cout << "SDL_Init_Error :  " << SDL_GetError() << std::endl;
 		return 1;
 	}
-	
 
-	SDL_Window *window;
-	SDL_Renderer *renderer;
+	if (IMG_Init(IMG_INIT_PNG) == 0) {
+		std::cout << "Error SDL2_image Initialization";
+		return 2;
+	}
+
+	SDL_Window* window;
+	SDL_Renderer* renderer;
 
 
 	SDL_CreateWindowAndRenderer(640, 480, SDL_WINDOW_RESIZABLE, &window, &renderer);
@@ -126,11 +132,11 @@ int main(int argc, char* argv[])
 	//SDL_FillRect(winSurface, NULL, SDL_MapRGB(winSurface->format, 255, 255, 255));
 
 
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-	//SDL_RenderDrawPoint(renderer, 20, 20);
-	DrawHorizontalLine(renderer, 20, 21, 300);
-	DrawVerticallLine(renderer, 20, 22, 300);
-	SDL_RenderPresent(renderer);
+	//SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	////SDL_RenderDrawPoint(renderer, 20, 20);
+	//DrawHorizontalLine(renderer, 20, 21, 300);
+	//DrawVerticallLine(renderer, 20, 22, 300);
+	//SDL_RenderPresent(renderer);
 
 	SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 	//DrawLine(renderer, 100, 100, 10, 10);
@@ -147,21 +153,44 @@ int main(int argc, char* argv[])
 	//DrawCircle(renderer, 300, 300, 100, 50);
 
 	//Idk why but it's a feature now
-	SDL_Rect rect = {300, 300, 40, 100};
+	//SDL_Rect rect = { 300, 300, 50, 50 };
 
-	//Rectangle rectangle = { rect };
-	//rectangle.Draw(renderer);
+	//Rectangle rectangle1 = { rect };
+	//rectangle1.SetPosition(0, 0, 0.5, 0.5);
+	//rectangle1.Draw(renderer);
 
-	Circle circle = { rect };
-	circle.Draw(renderer);
+	//Rectangle rectangle2 = { rect };
+	//rectangle2.SetPosition(0, 0, 0, 0);
+	//rectangle2.Draw(renderer);
+
+	//Rectangle rectangle3 = { rect };
+	//rectangle3.SetPosition(0, 0, 1, 1);
+	//rectangle3.Draw(renderer);
+
+	//Rectangle rectangle4 = { rect };
+	//rectangle4.SetPosition(0, 0, 1, 0.5);
+	//rectangle4.Draw(renderer);
+
+	//Rectangle rectangle5 = { rect };
+	//rectangle5.SetPosition(0, 0, 0.5, 1);
+	//rectangle5.Draw(renderer);
+
+	/*Circle circle = { rect };
+	circle.Draw(renderer);*/
 
 
-	DrawLine(renderer, 100, 100, 350, 200);
+	//DrawLine(renderer, 100, 100, 350, 200);
+
+	SDL_Rect rect = { 100, 100, 500, 500 };
+
+	Image img = { renderer, "../image/lettuce.png", rect };
+
+
 
 	SDL_RenderPresent(renderer);
 	//SDL_UpdateWindowSurface(window);
 
-	
+
 
 
 	system("pause");

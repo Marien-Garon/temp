@@ -4,9 +4,10 @@ void Circle::Draw(SDL_Renderer* renderer)
 {
 	struct pos { float x; float y; };
 	std::vector<pos> pointsList;
+	int precision = 360;
 
-	float deltaangle = 2 * M_PI / 360;
-	for (int i = 0; i < 360; i++)
+	float deltaangle = 2 * M_PI / precision;
+	for (int i = 0; i < precision; i++)
 	{
 		float angle = (i * deltaangle);
 
