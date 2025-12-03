@@ -5,6 +5,7 @@
 #include "Rectangle.h"
 #include "Circle.h"
 #include "Image.h"
+#include "InputManager.h"
 
 //THATS A JOKE 
 double pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823;
@@ -15,11 +16,20 @@ struct pos { int x; int y; };
 void handleInput()
 {
 	SDL_Event event;
+	std::vector<SDL_KeyboardEvent> key;
+	InputManager im = InputManager::getInstance();
+
 	while (true)
 	{
-		SDL_PollEvent(&event);
-		if (event.type == SDL_QUIT)
-			break;
+		im.update();
+
+		if (im.IsKeyDown('a'))
+			std::cout << "a : down" << std::endl;
+		if (im.IsKeyReleased('a'))
+			std::cout << "a : released" << std::endl;
+		if (im.IsMouseDown(0))
+			std::cout << "Clic gauche" << std::endl;
+
 	}
 }
 
@@ -131,19 +141,13 @@ int main(int argc, char* argv[])
 
 
 	//SDL_Surface* winSurface = SDL_GetWindowSurface(window);
-
 	//if (!winSurface) {
 	//	std::cout << "Surface_error : " << SDL_GetError() << std::endl;
 	//	SDL_DestroyWindow(window);
 	//	SDL_Quit();
 	//	return 1;
 	//}
-
-
-
 	//SDL_FillRect(winSurface, NULL, SDL_MapRGB(winSurface->format, 255, 255, 255));
-
-
 	//SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	////SDL_RenderDrawPoint(renderer, 20, 20);
 	//DrawHorizontalLine(renderer, 20, 21, 300);
@@ -153,17 +157,13 @@ int main(int argc, char* argv[])
 	//SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 	//DrawLine(renderer, 100, 100, 10, 10);
 	////SDL_RenderDrawPoint(renderer, 10, 10);
-
 	//DrawRectangle(renderer, 50, 50, 100, 100);
-
-
 	//SDL_RenderDrawLine(renderer,0, 0, 50 ,20);
 
 	//SDL_Rect rect = { 150, 150, 100, 100 };
 	//SDL_RenderDrawRect(renderer, &rect);
 
 	//DrawCircle(renderer, 300, 300, 100, 50);
-
 	//Idk why but it's a feature now
 	//SDL_Rect rect = { 300, 300, 50, 50 };
 
@@ -204,10 +204,12 @@ int main(int argc, char* argv[])
 
 
 
-	
+	std::cout << "Game Loop" << std::endl;
 	handleInput();
+
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
+
 	IMG_Quit();
 	SDL_Quit();
 
