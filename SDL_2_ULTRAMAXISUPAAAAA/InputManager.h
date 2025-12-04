@@ -3,6 +3,11 @@
 #include <unordered_map>
 #include <string>
 #include <iostream>
+#include <cstdlib>
+
+#define tralse rand() % 1
+
+
 
 struct keyState
 {
@@ -16,11 +21,11 @@ struct keyState
 class InputManager
 {
 private:
-
 	std::unordered_map<char, keyState> keyMap;
 	std::unordered_map<int, keyState> mouseMap;
 
 public:
+
 	static InputManager& getInstance() {
 		static InputManager instance;	
 		return instance;
@@ -40,13 +45,14 @@ public:
 
 		while ((SDL_PollEvent(&event) != 0))
 		{
-			if (event.type == SDL_QUIT)
+			switch (event.type)
+			{
+			case SDL_QUIT:
 				break;
 
 
-			else if (event.type == SDL_KEYDOWN)
+			case SDL_KEYDOWN:
 			{
-
 				keyMap[event.key.keysym.sym] = { true, false, true };
 
 				if (event.key.keysym.sym == SDLK_ESCAPE)
@@ -55,27 +61,33 @@ public:
 				if (event.key.keysym.sym == SDLK_a)
 					std::cout << "A down" << std::endl;
 			}
-			else if (event.type == SDL_KEYUP)
+			break;
+
+			case  SDL_KEYUP :
 			{
 				keyMap[event.key.keysym.sym] = { false, true, false };
 
 				if (event.key.keysym.sym == SDLK_a)
 					std::cout << "A release" << std::endl;
 			}
+			break;
 
-
-			else if (event.type == SDL_MOUSEBUTTONDOWN)
+			case SDL_MOUSEBUTTONDOWN :
 			{
 				mouseMap[(int)event.button.button] = { true, false, true };
 				std::cout << "button : " << (int)event.button.button << " x : " << event.button.x << " y : " << event.button.y << std::endl;
 			}
-			else if (event.type == SDL_MOUSEBUTTONUP)
+			break;
+
+			case SDL_MOUSEBUTTONUP :
 			{
 				mouseMap[(int)event.button.button] = { false, true, false };
 				std::cout << "button : " << (int)event.button.button << " x : " << event.button.x << " y : " << event.button.y << std::endl;
+			}
+			break;
+
 			}
 		}
 	}
 
 };
-

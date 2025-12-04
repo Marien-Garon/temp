@@ -10,8 +10,13 @@ void Circle::Draw(SDL_Renderer* renderer)
 	for (int i = 0; i < precision; i++)
 	{
 		float angle = (i * deltaangle);
+		int posX = rect.x + cos(angle) * rect.w;
+		posX > 800 ? posX -= 800 : posX < 0 ? posX += 800 : posX+= 0;
 
-		pos points = { rect.x + cos(angle) * rect.w, rect.x + sin(angle) * rect.h };
+		int posY = rect.y + sin(angle) * rect.h;
+		posY > 800 ? posY -= 800 : posY < 0 ? posY += 800 : posY += 0;
+
+		pos points = { posX, rect.y + sin(angle) * rect.h };
 		pointsList.push_back(points);
 	}
 
