@@ -22,7 +22,7 @@ public:
 	void SetPosition(int x, int y, float anchorX, float anchorY);
 	Vector2D GetPosition(float anchorX, float anchorY);
 
-
+	bool isCollided(Geometry* forme);
 
 	virtual void Draw(SDL_Renderer* renderer) = 0;
 };

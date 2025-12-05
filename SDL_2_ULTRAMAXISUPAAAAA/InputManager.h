@@ -39,24 +39,49 @@ public:
 	bool IsMouseReleased(int button) { return mouseMap[button].isRelease; }
 	bool IsMouseHeld(int button) { return mouseMap[button].isHeld; }
 
-	void update()
+
+
+	/*
+	I JUST WANNA BE PART OF YOUR SKIBIDIIIIIIIIII
+	*/
+	bool update()
 	{
 		SDL_Event event;
-
-		while ((SDL_PollEvent(&event) != 0))
+		
+		for (auto& pair : keyMap) 
 		{
+			if (pair.second.isDown)
+				pair.second = { false, false, true };
+		}
+
+
+
+		for (auto& pair : mouseMap)
+		{
+			if (pair.second.isDown)
+				pair.second = { false, false, true };
+		}
+
+		while ((SDL_PollEvent(&event)))
+		{	
+
+
 			switch (event.type)
 			{
 			case SDL_QUIT:
-				break;
+				return false;
 
-
+		
 			case SDL_KEYDOWN:
 			{
-				keyMap[event.key.keysym.sym] = { true, false, true };
+				if (keyMap[event.key.keysym.sym].isDown || keyMap[event.key.keysym.sym].isHeld)
+					keyMap[event.key.keysym.sym] = { false, false, true };
+				else
+					keyMap[event.key.keysym.sym] = { true, false, false };
+
 
 				if (event.key.keysym.sym == SDLK_ESCAPE)
-					break;
+					return false;
 
 				if (event.key.keysym.sym == SDLK_a)
 					std::cout << "A down" << std::endl;
@@ -74,7 +99,12 @@ public:
 
 			case SDL_MOUSEBUTTONDOWN :
 			{
-				mouseMap[(int)event.button.button] = { true, false, true };
+				if (mouseMap[(int)event.button.button].isDown || mouseMap[(int)event.button.button].isHeld)
+					mouseMap[(int)event.button.button] = { false, false, true };
+				else
+					mouseMap[(int)event.button.button] = { true, false, false };
+
+
 				std::cout << "button : " << (int)event.button.button << " x : " << event.button.x << " y : " << event.button.y << std::endl;
 			}
 			break;
@@ -88,6 +118,9 @@ public:
 
 			}
 		}
+
+		return true;
 	}
 
 };
+

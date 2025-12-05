@@ -10,6 +10,5 @@ public:
 		Geometry(rect) {}
 
 	void Draw(SDL_Renderer* renderer) override;
-
 };
 

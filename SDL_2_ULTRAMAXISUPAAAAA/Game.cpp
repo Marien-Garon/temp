@@ -8,19 +8,23 @@ void Game::HandleInput()
 
 	
 	SDL_Rect rect = { 100, 100, 50, 50 };
+	SDL_Rect rect1 = { 200, 200, 50, 50 };
 	Circle circle = { rect };
+	Circle circle1 = { rect1 };
 
+	int ticks = SDL_GetTicks();
 
-	SDL_GetTicks();
-
-	while (true)
+	while (im.update())
 	{
+		int fps;
+		ticks = SDL_GetTicks();
+
 		SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 		SDL_RenderClear(renderer);
-		im.update();
 
 		SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 		circle.Draw(renderer);
+		circle1.Draw(renderer);
 		SDL_RenderPresent(renderer);
 		//if (im.IsKeyDown('a'))
 		//	std::cout << "a : down" << std::endl;
@@ -29,28 +33,41 @@ void Game::HandleInput()
 		//if (im.IsMouseDown(0))
 		//	std::cout << "Clic gauche" << std::endl;
 
-		if (im.IsKeyDown('z')) 
+		if (im.IsKeyHeld('z')) 
 		{
 			std::cout << "z pressed" << std::endl;
 			circle.SetPosition(circle.GetPosition(0, 0).x, circle.GetPosition(0, 0).y - 1, 0, 0);
+			circle1.SetPosition(circle1.GetPosition(0, 0).x, circle1.GetPosition(0, 0).y + 1, 0, 0);
 		}
+
 		
-		if (im.IsKeyDown('s'))
+		if (im.IsKeyHeld('s'))
 		{
 			std::cout << "s pressed" << std::endl;
 			circle.SetPosition(circle.GetPosition(0, 0).x, circle.GetPosition(0, 0).y + 1, 0, 0);
+			circle1.SetPosition(circle1.GetPosition(0, 0).x, circle1.GetPosition(0, 0).y - 1, 0, 0);
 		}
 
-		if (im.IsKeyDown('q'))
+		if (im.IsKeyHeld('q'))
 		{
 			std::cout << "q pressed" << std::endl;
 			circle.SetPosition(circle.GetPosition(0, 0).x - 1, circle.GetPosition(0, 0).y, 0, 0);
+			circle1.SetPosition(circle1.GetPosition(0, 0).x + 1, circle1.GetPosition(0, 0).y, 0, 0);
 		}
 
-		if (im.IsKeyDown('d'))
+		if (im.IsKeyHeld('d'))
 		{
 			std::cout << "d pressed" << std::endl;
 			circle.SetPosition(circle.GetPosition(0, 0).x + 1, circle.GetPosition(0, 0).y, 0, 0);
+			circle1.SetPosition(circle1.GetPosition(0, 0).x - 1, circle1.GetPosition(0, 0).y, 0, 0);
+		}
+
+
+		if (SDL_GetTicks() - ticks < 60) 
+		{
+
+			SDL_Delay(60 - (SDL_GetTicks() - ticks));
+			std::cout << SDL_GetTicks() - ticks << std::endl;
 		}
 	}
 }
@@ -92,8 +109,8 @@ void Game::Update()
 {
 	SDL_Rect rect = { 0, 0, 410, 300 };
 
-	Image img = { renderer, "../image/lettuce.png", rect };
-	img.Draw(renderer);
+	//Image img = { renderer, "../image/lettuce.png", rect };
+	//img.Draw(renderer);
 
 	SDL_RenderPresent(renderer);
 	HandleInput();
@@ -107,3 +124,4 @@ void Game::Close()
 	IMG_Quit();
 	SDL_Quit();
 }
+
