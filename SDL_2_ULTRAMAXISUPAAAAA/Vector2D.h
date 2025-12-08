@@ -47,4 +47,15 @@ struct Vector2D
 		return { 0.0f, 0.0f };
 	};
 	
+	float Distance(Vector2D* other)
+	{ 
+		//return abs(x - other->x) + abs(y - other->y); 
+		
+		int dx = x - other->x;
+		int dy = y - other->y;
+
+		return sqrt(dx * dx + dy * dy);
+
+	};
+
 };

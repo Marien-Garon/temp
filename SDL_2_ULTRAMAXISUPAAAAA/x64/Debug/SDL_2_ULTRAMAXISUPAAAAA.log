@@ -1,11 +1,44 @@
 ﻿  Game.cpp
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(53,99): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(53,61): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(62,99): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(62,61): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(70,110): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(70,64): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(78,110): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(78,64): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(7,12): warning C4101: 'event' : variable locale non référencée
-  SDL_2_ULTRAMAXISUPAAAAA.vcxproj -> C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\x64\Debug\SDL_2_ULTRAMAXISUPAAAAA.exe
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(54,10): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  (compiler le fichier source 'Game.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(55,10): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  (compiler le fichier source 'Game.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(57,14): warning C4244: 'return' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'Game.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(7,12): warning C4101: 'event' : variable locale non référencée
+  Particle.cpp
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(54,10): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  (compiler le fichier source 'Particle.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(55,10): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  (compiler le fichier source 'Particle.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(57,14): warning C4244: 'return' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'Particle.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Particle.h(27,1): error C2143: erreur de syntaxe : absence de ';' avant '}'
+  (compiler le fichier source 'Particle.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Particle.h(27,1): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+  (compiler le fichier source 'Particle.cpp')
+  
+  ParticleEmitter.cpp
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(54,10): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  (compiler le fichier source 'ParticleEmitter.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(55,10): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+  (compiler le fichier source 'ParticleEmitter.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Vector2D.h(57,14): warning C4244: 'return' : conversion de 'double' en 'float', perte possible de données
+  (compiler le fichier source 'ParticleEmitter.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Particle.h(27,1): error C2143: erreur de syntaxe : absence de ';' avant '}'
+  (compiler le fichier source 'ParticleEmitter.cpp')
+  
+C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Particle.h(27,1): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+  (compiler le fichier source 'ParticleEmitter.cpp')
+  
+  Génération de code en cours...

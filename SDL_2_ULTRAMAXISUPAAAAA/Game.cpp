@@ -14,11 +14,12 @@ void Game::loop()
 	Circle circle = { rect };
 	Circle circle1 = { rect1 };
 
+	Rectangle rectangle = { { (int)circle.GetPosition().x, (int)circle.GetPosition().y, 50 , 50} };
 	//SDL_Rect rect3 = { 0, 0, 410, 300 };
 	//Image img = { renderer, "../image/lettuce.png", rect3 };
 
 	am.PlayMusic("mellow", -1);
-	am.SetMusicVolume(0);
+	am.SetMusicVolume(40);
 
 	static int lastTicks = SDL_GetTicks();
 
@@ -30,7 +31,7 @@ void Game::loop()
 
 		lastTicks = currentTicks;
 
-		const float velocity = 300.0f;
+		const float velocity = 10.0f;
 		float deplacement = velocity * deltaTime;
 
 
@@ -41,6 +42,7 @@ void Game::loop()
 		SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 		circle.Draw(renderer);
 		circle1.Draw(renderer);
+		//rectangle.Draw(renderer);
 		//img.Draw(renderer);
 		SDL_RenderPresent(renderer);
 
@@ -50,7 +52,7 @@ void Game::loop()
 			std::cout << "z pressed" << std::endl;
 			circle.Move({ 0, -deplacement });
 			//circle.SetPositionAnchor(circle.GetPositionAnchor(0, 0).x, circle.GetPositionAnchor(0, 0).y - deplacement, 0, 0);
-			circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x, circle1.GetPositionAnchor(0, 0).y + deplacement, 0, 0);
+			//circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x, circle1.GetPositionAnchor(0, 0).y + deplacement, 0, 0);
 		}
 
 		
@@ -59,7 +61,7 @@ void Game::loop()
 			std::cout << "s pressed" << std::endl;
 			circle.Move({ 0, deplacement });
 			//circle.SetPositionAnchor(circle.GetPositionAnchor(0, 0).x, circle.GetPositionAnchor(0, 0).y + deplacement, 0, 0);
-			circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x, circle1.GetPositionAnchor(0, 0).y - deplacement, 0, 0);
+			//circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x, circle1.GetPositionAnchor(0, 0).y - deplacement, 0, 0);
 		}
 
 		if (im.IsKeyHeld('q'))
@@ -67,7 +69,7 @@ void Game::loop()
 			std::cout << "q pressed" << std::endl;
 			circle.Move({ -deplacement, 0 });
 			//circle.SetPositionAnchor(circle.GetPositionAnchor(0, 0).x - deplacement, circle.GetPositionAnchor(0, 0).y, 0, 0);
-			circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x + deplacement, circle1.GetPositionAnchor(0, 0).y, 0, 0);
+			//circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x + deplacement, circle1.GetPositionAnchor(0, 0).y, 0, 0);
 		}
 
 		if (im.IsKeyHeld('d'))
@@ -75,7 +77,7 @@ void Game::loop()
 			std::cout << "d pressed" << std::endl;
 			circle.Move({ deplacement, 0 });
 			//circle.SetPositionAnchor(circle.GetPositionAnchor(0, 0).x + deplacement, circle.GetPositionAnchor(0, 0).y, 0, 0);
-			circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x - deplacement, circle1.GetPositionAnchor(0, 0).y, 0, 0);
+			//circle1.SetPositionAnchor(circle1.GetPositionAnchor(0, 0).x - deplacement, circle1.GetPositionAnchor(0, 0).y, 0, 0);
 		}
 
 		if (im.IsKeyDown('p'))
@@ -148,6 +150,12 @@ bool Game::init()
 
 void Game::Close()
 {
+	AssetsManager& am = AssetsManager::getInstance();
+
+	am.DeleteAllMusic();
+	am.DeleteAllSound();
+	am.DeleteAllTexture();
+
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	Mix_CloseAudio();

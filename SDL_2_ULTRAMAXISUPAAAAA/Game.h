@@ -6,6 +6,7 @@
 #include <vector>
 #include "InputManager.h"
 #include "Image.h"
+#include "Rectangle.h"
 #include "Circle.h"
 
 class Game 

@@ -33,3 +33,22 @@ void Circle::Draw(SDL_Renderer* renderer)
 	SDL_RenderDrawLine(renderer, pointsList[p1].x, pointsList[p1].y, pointsList[0].x, pointsList[0].y);
 }
 
+bool Circle::isCollided(Circle* circ)
+{
+	//if ((rect.x < forme->rect.x + forme->rect.w && rect.x + rect.w > forme->rect.x && rect.y < forme->rect.y + forme->rect.h && rect.y + rect.h > forme->rect.y))
+
+	//SDL_Rect circRect = circ->GetRect();
+	int radiusW = circ->GetRadiusW();
+	int radiusH = circ->GetRadiusH();
+
+	int distance = (int)position.Distance(&circ->position);
+
+	//std::cout << "distance: " << distance << " true :" << (radiusW + GetRadiusW() + radiusH + GetRadiusH()) / 2 << "\n";
+	if (distance <= (radiusW + GetRadiusW() + radiusH + GetRadiusH()) / 2)
+		return true;
+	
+
+
+	return false;
+}
+

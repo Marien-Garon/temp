@@ -28,6 +28,8 @@ public:
 	void SetPositionAnchor(int x, int y, float anchorX, float anchorY);
 	Vector2D GetPositionAnchor(float anchorX, float anchorY);
 
+	SDL_Rect GetRect() { return rect; };
+
 	Vector2D GetPosition() { return position; };
 
 	void Move(Vector2D movement);
@@ -36,7 +38,7 @@ public:
 
 	void UpdateRect();
 
-	bool isCollided(Geometry* forme);
+	virtual bool isCollided(Geometry* forme);
 
 	virtual void Draw(SDL_Renderer* renderer) = 0;
 };

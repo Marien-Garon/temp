@@ -20,7 +20,8 @@ private:
 	float size;
 
 public:
-
+	
+	void Update();
 
 
 };
