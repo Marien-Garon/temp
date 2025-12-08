@@ -1,26 +1,40 @@
 #pragma once
 #include <SDL.h>
-
-struct Vector2D 
-{
-	float x;
-	float y;
-};
+#include "Vector2D.h"
 
 
 class Geometry 
 {
 protected:
+
+	Vector2D position;
+	
+	int width;
+	int height;
+
 	SDL_Rect rect;
 
 
 public:
 
-	Geometry(SDL_Rect rectVal) :
-		rect(rectVal) {}
+	Geometry(int x, int y, int w, int h) :
+		position({ (float)x, (float)y }),
+		width(w),
+		height(h)
+	{ 
+		rect = { x, y, w, h};
+	}
 
-	void SetPosition(int x, int y, float anchorX, float anchorY);
-	Vector2D GetPosition(float anchorX, float anchorY);
+	void SetPositionAnchor(int x, int y, float anchorX, float anchorY);
+	Vector2D GetPositionAnchor(float anchorX, float anchorY);
+
+	Vector2D GetPosition() { return position; };
+
+	void Move(Vector2D movement);
+
+	void SetPosition(Vector2D newPos);
+
+	void UpdateRect();
 
 	bool isCollided(Geometry* forme);
 

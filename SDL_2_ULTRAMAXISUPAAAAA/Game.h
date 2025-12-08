@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_mixer.h>
 #include <iostream>
 #include <vector>
 #include "InputManager.h"
@@ -17,11 +18,11 @@ private:
 
 public:
 
-	void HandleInput();
+	void loop();
 
-	void init();
+	bool init();
 
-	void Update();
+	//void Update();
 
 	void Close();
 

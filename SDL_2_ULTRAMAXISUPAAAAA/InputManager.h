@@ -41,9 +41,6 @@ public:
 
 
 
-	/*
-	I JUST WANNA BE PART OF YOUR SKIBIDIIIIIIIIII
-	*/
 	bool update()
 	{
 		SDL_Event event;

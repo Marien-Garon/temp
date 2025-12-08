@@ -1,47 +1,11 @@
-﻿  Circle.cpp
-  Game.cpp
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(9,19): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(13,12): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(16,12): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,18): warning C4838: la conversion de 'int' en 'float' requiert une conversion restrictive
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,18): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,24): warning C4838: la conversion de 'int' en 'float' requiert une conversion restrictive
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(19,24): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(27,104): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(27,83): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(27,62): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(27,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(29,9): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(33,97): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(33,80): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(33,63): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Circle.cpp(33,45): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(39,78): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(39,47): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(40,81): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(40,49): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(47,78): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(47,47): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(48,81): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(48,49): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(54,79): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(54,50): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(55,82): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(55,52): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(61,79): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(61,50): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(62,82): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(62,52): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(5,12): warning C4101: 'event' : variable locale non référencée
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(19,7): warning C4101: 'fps' : variable locale non référencée
-  Geometry.cpp
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Geometry.cpp(5,13): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Geometry.cpp(6,13): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
-  Image.cpp
-  InputManager.cpp
-  Rectangle.cpp
-  main.cpp
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\main.cpp(20,12): warning C4101: 'event' : variable locale non référencée
-  Génération de code en cours...
-C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Geometry.cpp(29): warning C4715: 'Geometry::isCollided' : les chemins de contrôle ne retournent pas tous une valeur
-  SDL_2_ULTRAMAXISUPAAAAA.vcxproj -> C:\Users\mgaron\source\repos\SDL_2_ULTRAMAXISUPAAAAA\x64\Debug\SDL_2_ULTRAMAXISUPAAAAA.exe
+﻿  Game.cpp
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(53,99): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(53,61): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(62,99): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(62,61): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(70,110): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(70,64): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(78,110): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(78,64): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\SDL_2_ULTRAMAXISUPAAAAA\Game.cpp(7,12): warning C4101: 'event' : variable locale non référencée
+  SDL_2_ULTRAMAXISUPAAAAA.vcxproj -> C:\Users\Utilisateur\Documents\GitHub\SDL_2_ULTRAMAXISUPAAAAA\x64\Debug\SDL_2_ULTRAMAXISUPAAAAA.exe

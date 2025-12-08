@@ -10,10 +10,10 @@ private:
 
 public:
 
-	Image(SDL_Renderer* renderer, std::string path, SDL_Rect rect) :
-		Geometry(rect)
+	Image(SDL_Renderer* renderer, std::string id, SDL_Rect rect) :
+		Geometry(rect.x, rect.y, rect.w, rect.h)
 	{
-		texture = AssetManager::LoadImage(renderer, path);
+		texture = AssetsManager::getInstance().GetTexture(id);
 	}
 
 	~Image() { SDL_DestroyTexture(texture); };
